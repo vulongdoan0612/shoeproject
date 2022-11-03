@@ -1,0 +1,77 @@
+.banner {
+  min-height: 900px;
+  padding: 0 !important;
+}
+.firstBanner {
+  min-height: 900px;
+
+  object-fit: fill;
+  background-size: 1152px 1004px;
+  display: flex;
+
+  background-image: url("https://wootten.com.au/assets/images/services/services-background_2x.0aa5242.jpg");
+}
+.cardLeftFirst {
+  background-color: white;
+  height: fit-content;
+  margin-top: 25%;
+  margin-left: auto;
+  width: 20vw;
+  outline: none;
+  border: none;
+  margin-right: 10px;
+}
+
+.cardRightFirst {
+  background-color: white;
+  outline: none;
+  border: none;
+  height: fit-content;
+  margin-top: 25%;
+  margin-right: auto;
+  width: 20vw;
+  margin-left: 10px;
+}
+.cardLeftFirst p {
+  padding: 15px 20px;
+}
+.cardRightFirst p {
+  padding: 15px 20px;
+}
+.headerFirst {
+  margin-top: 10vh;
+  width: 20vw;
+  left: 37vw;
+  position: absolute;
+}
+.cecondBanner {
+  display: flex;
+}
+.titleLeft {
+  position: absolute;
+}
+.titleLeft {
+  margin-top: 40vh;
+  left: 20vw;
+  width: 200px;
+}
+.titleRight {
+  position: absolute;
+}
+.titleRight {
+  margin-top: 40vh;
+  right: 20vw;
+  width: 200px;
+}
+.leftSecond:hover {
+  opacity: 0.8;
+}
+.rightSecond:hover {
+  opacity: 0.8;
+}
+.leftSecond {
+  transition: all 0.3s ease;
+}
+.rightSecond {
+  transition: all 0.3s ease;
+}

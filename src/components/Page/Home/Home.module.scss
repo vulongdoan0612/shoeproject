@@ -4,12 +4,11 @@
   box-sizing: border-box;
 }
 * {
-  margin: 0px;
+  margin: 0;
   padding: 0;
   font: inherit;
 }
 body {
-  margin:0px;
   line-height: 1.5;
 }
 img,
@@ -35,9 +34,9 @@ h5,
 h6 {
   overflow-wrap: break-word;
 }
+.wrapper {
+  margin-left: 3vw;
+  margin-right: 3vw;
 
-img{
-  width:100%;
-  object-fit: fill;
+  background-color: #f0f0f0;
 }
-

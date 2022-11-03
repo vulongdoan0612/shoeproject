@@ -1,0 +1,21 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.workShop {
+  padding-top: 80px;
+  align-items: center;
+  display: flex;
+}
+.flexCard {
+  flex-wrap: wrap;
+  position: relative;
+
+  display: flex;
+}
+.workShop-img {
+  z-index: 10;
+  width: 150px;
+  position: absolute;
+}
