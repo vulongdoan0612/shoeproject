@@ -14,7 +14,6 @@ export const productSlice = createSlice({
       const existingIndex = state.cart.findIndex(
         (item) => item.id === action.payload.id
       );
-      console.log(existingIndex);
 
       if (existingIndex >= 0) {
         state.cart[existingIndex] = {

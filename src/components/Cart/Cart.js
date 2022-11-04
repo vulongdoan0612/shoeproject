@@ -8,7 +8,18 @@ import { Link } from "react-router-dom";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 const cx = classNames.bind(styles);
 
-export default function Cart() {
+export default function Cart(props) {
+  const {
+    changeImg,
+    sizeL,
+    sizeR,
+    changeImgBlack,
+    changeImgBlue,
+    changeImgYellow,
+    changeImgBrown,
+    changeImgGreen,
+    changeImgGrey,
+  } = props;
   const cart = useSelector((state) => state.add);
   const dispatch = useDispatch();
   useEffect(() => {
@@ -39,7 +50,18 @@ export default function Cart() {
               <p>TOTAL</p>
             </div>
           </div>
-          <CartItem getCart={getCart} />
+          <CartItem
+            changeImgBlack={changeImgBlack}
+            changeImgBlue={changeImgBlue}
+            changeImgYellow={changeImgYellow}
+            changeImgBrown={changeImgBrown}
+            changeImgGreen={changeImgGreen}
+            changeImgGrey={changeImgGrey}
+            getCart={getCart}
+            changeImg={changeImg}
+            siezL={sizeL}
+            sizeR={sizeR}
+          />
           <input
             value="CHECKOUT"
             type="submit"
@@ -50,6 +72,8 @@ export default function Cart() {
               <div className={cx("flexbox")}>
                 <p>SUBTOTAL</p>
                 <p>{cart.cartTotalAmount} $</p>
+                <p>{sizeL}</p>
+                <p>{sizeR}</p>
               </div>
             </div>
           </div>

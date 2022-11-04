@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import classNames from "classnames/bind";
 import styles from "./Cards.module.scss";
 import { addProduct } from "../../redux/addToCart";
+import { Link } from "@mui/material";
 const cx = classNames.bind(styles);
 export default function Cards() {
   const dispatch = useDispatch();
@@ -42,6 +43,7 @@ export default function Cards() {
           return (
             <div onClick={() => handleAdd(product)} key={id}>
               <CardItem
+                id={product.id}
                 product={product}
                 form={product.form}
                 title={product.title}
@@ -52,7 +54,6 @@ export default function Cards() {
           );
         })}
       </div>
-      
     </div>
   );
 }

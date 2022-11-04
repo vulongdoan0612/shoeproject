@@ -9,13 +9,26 @@ const cx = classNames.bind(styles);
 
 export default function CartItem(props) {
   const dispatch = useDispatch();
-  const { getCart } = props;
+  const {
+    getCart,
+    changeImg,
+    sizeL,
+    sizeR,
+    changeImgGreen,
+    changeImgBlue,
+    changeImgGrey,
+    changeImgYellow,
+    changeImgBrown,
+    changeImgBlack,
+  } = props;
+  console.log(getCart);
   const handleUp = (get) => {
     dispatch(addProduct(get));
   };
   const handleDown = (get) => {
     dispatch(decreaseProduct(get));
   };
+  console.log(changeImg);
   return (
     <>
       {getCart.map((get) => {
@@ -23,11 +36,40 @@ export default function CartItem(props) {
           <div className={cx("wrapper")}>
             <div className={cx("card")}>
               <div className={cx("leftCard")}>
-                <div className={cx("cardImg")}>
-                  <img src={get.img} alt=""></img>
-                </div>
+                {changeImg ? (
+                  <div className={cx("cardImg")}>
+                    <img src={get.img} alt=""></img>
+                  </div>
+                ) : changeImgGreen ? (
+                  <div className={cx("cardImg")}>
+                    <img src={get.imgGreen} alt=""></img>
+                  </div>
+                ) : changeImgBlue ? (
+                  <div className={cx("cardImg")}>
+                    <img src={get.imgBlue} alt=""></img>
+                  </div>
+                ) : changeImgGrey ? (
+                  <div className={cx("cardImg")}>
+                    <img src={get.imgGrey} alt=""></img>
+                  </div>
+                ) : changeImgYellow ? (
+                  <div className={cx("cardImg")}>
+                    <img src={get.imgYellow} alt=""></img>
+                  </div>
+                ) : changeImgBrown ? (
+                  <div className={cx("cardImg")}>
+                    <img src={get.imgBrown} alt=""></img>
+                  </div>
+                ) : changeImgBlack ? (
+                  <div className={cx("cardImg")}>
+                    <img src={get.imgBlack} alt=""></img>
+                  </div>
+                ) : (
+                  <></>
+                )}
                 <div className={cx("cardInfo")}>
                   <p>{get.title}</p>
+                  {changeImg ? <p>color:black</p> : <></>}
                 </div>
               </div>
               <div className={cx("qnty")}>
