@@ -3,7 +3,6 @@ const productsAPI = [
     id: 1,
     title: "JACK GUSSET BOOT",
     footSize: "FOOT SIZE :",
-    color: "black",
     img: "https://wootten.com.au/media/cache/f892646c1326b20d3b923cbafec31fabc4246de3.jpg",
     img2: "https://wootten.com.au/media/cache/aaf5c227e8ad1ae5c49f650fb691b9cab1648039.jpg",
     img3: "https://wootten.com.au/media/cache/9e792dcca94d95c5102c75824ff7c3f2f1c8c54c.jpg",
@@ -22,7 +21,7 @@ const productsAPI = [
     soleText2: "McKaY Welt Rubber",
 
     form: "FITTING",
-    price: "740.000",
+    price: "740",
     details:
       "If you love shoes then there has to be a special place in your heart for this classic hand-brogued Oxford A classic English style.\n\nStyle: Ladies Wingtip Oxford Brogue\n\nUpper: One or two tone Analine leather, leather lining\n\nSole: Leather sole can be blake stitched (stitched once) with or without rand (Plain Jane), or blake rapid (stitched twice). Stacked leather heel with rubber top piece.\n\nUpper options: Prices will vary depending on leather chosen and sole. Kangaroo leather has more texture and markings, the skin is strong, but it’s also very fine in thickness. The veg-tan roo also is a dry leather and thus high maintenance in that it needs regular conditioning to avoid it drying out. Yearling has similar body to bovine leather, but has a smoother grain and a more polished finish. It is also more readily dyed. Yearling and bovine are our preferred choices for regular wear. Baby calf leather is like the cashmere of leather and the choice for high gloss potential, formal occasions and infrequent wear. Bovine is a great choice for regular wear.\n\nPlease note that all our footwear is made-to-order. Fitting stock is available at our shop in Melbourne. Lead times can be found in our footer below for leather goods and footwear.",
   },
@@ -47,7 +46,7 @@ const productsAPI = [
       "https://wootten.com.au/media/cache/a9f82583f1696f619ed3dac7490fa9d8ea2f7a87.jpg",
     soleText2: "McKaY Welt Rubber",
     form: "FITTING",
-    price: "460.000",
+    price: "460",
     details:
       "Bob is a capable chap and a traditional Veldtschoen desert boot.\n\nUpper: Bovine leather fully leather lined. Leather heel counter and toe puff.\n\nSole: Stacked leather heel with stitched 6mm topy rug rubber sole. Note if opting for the leather sole we would very strongly recommend adding the 1/2 topy for protection, ease of repair and longevity.\n\nPlease note that fitting stock is available in the Melbourne shop and Ballarat workshop and all our footwear is made-to-order. Lead times can be found in the footer of our website.",
   },
@@ -75,7 +74,7 @@ const productsAPI = [
       "https://wootten.com.au/media/cache/4e075cb323e8f54855668f3816f5e79e1c2f60b4.jpg",
     soleText3: "Blake Stitched",
     form: "FITTING - MELBOURNE & BALLARAT",
-    price: "775.000",
+    price: "775",
     details:
       "This fully lined Derby boot is made using calf, yearling, kangaroo or bovine leather. It can also be made on our dress shoe lasts, the Cambridge and Stanley, to give a more refined look.\n\nStyle: Derby boot\n\nUpper: Choose between bovine, kangaroo, yearling and calf\n\nPrices will vary depending on leather chosen and sole. Kangaroo leather has more texture and markings, the skin is strong, but it’s also very fine in thickness. The veg-tan roo also is a dry leather and thus high maintenance in that it needs regular conditioning to avoid it drying out. Yearling has similar body to bovine leather, but has a smoother grain and a more polished finish. It is also more readily dyed. Yearling and bovine are our preferred choices for regular wear. Baby calf leather is like the cashmere of leather and the choice for high gloss potential, formal occasions and infrequent wear. Bovine is a great choice for regular wear.\n\nSole: 5mm Italian oak tanned, hand waxed, Blake stitched or blake rapid leather sole. Stacked leather heel, Vibram top piece.\n\nPlease note that all our footwear is made-to-order. Lead times can be found in our footer below for leather goods and footwear.\n\nTo inquire or discuss any of the custom options seen on this page please email or call us to discuss: workshop@wootten.com.au or 03 9510 6503.\n\nOptions include toe cap or no toe cap, medallion, storm welts, rubber sole, etc. Please note that there may be extra charges for these details.",
   },
@@ -100,7 +99,7 @@ const productsAPI = [
       "https://wootten.com.au/media/cache/941d77db79219238d89851ddaa3aff7433aac7ba.jpg",
     soleText2: "Plain Jane",
     form: "FITTING - MELBOURNE",
-    price: "775.000",
+    price: "775",
     details:
       "Betty is a classic lace up Balmoral boot with a refined sole.\n\nMade from bovine, kangaroo or yearling leather and contrasted with linen, Harris Tweed, canvas or suede, fully leather lined with leather soling and a 55mm leather stacked Cuban heel.\n\nPlease note that all our footwear is made-to-order. Fitting stock is available at our shop in Melbourne. Lead times can be found in our footer below for leather goods and footwear.",
   },
@@ -128,7 +127,7 @@ const productsAPI = [
       "https://wootten.com.au/media/cache/4e075cb323e8f54855668f3816f5e79e1c2f60b4.jpg",
     soleText3: "Blake Stitched",
     form: "FITTING - MELBOURNE & BALLARAT",
-    price: "600.000",
+    price: "600",
     details:
       "If you love shoes then there has to be a special place in your heart for this classic hand-brogued Oxford. A classic English style.\n\nStyle: Ladies Wingtip Oxford Brogue\n\nUpper: One or two tone Analine leather, leather lining\n\nSole: Leather sole can be blake stitched (stitched once) with or without rand (Plain Jane), or blake rapid (stitched twice). Stacked leather heel with rubber top piece.\n\nUpper options: Prices will vary depending on leather chosen and sole. Kangaroo leather has more texture and markings, the skin is strong, but it’s also very fine in thickness. The veg-tan roo also is a dry leather and thus high maintenance in that it needs regular conditioning to avoid it drying out. Yearling has similar body to bovine leather, but has a smoother grain and a more polished finish. It is also more readily dyed. Yearling and bovine are our preferred choices for regular wear. Baby calf leather is like the cashmere of leather and the choice for high gloss potential, formal occasions and infrequent wear. Bovine is a great choice for regular wear.\n\nPlease note that all our footwear is made-to-order. Fitting stock is available at our shop in Melbourne. Lead times can be found in our footer below for leather goods and footwear.",
   },
@@ -146,7 +145,7 @@ const productsAPI = [
     fittingGuide:
       "The small size is typically suitable for 0-6 month babies (approx 10cm length of sole)\n\nThe large size is suitable for 6-12 month babies (approx. 11.5cm length of sole)\n\nThese are pre-walking booties and as such are not ideal if your child has begun walking on hard ground due to the soft nature of the sole.",
     form: "FITTING - MELBOURNE & BALLARAT",
-    price: "55.000",
+    price: "55",
     details:
       "Baby Booties\n\nSoft sole and soft leather upper.\n\nClassic Gusset, elastic sided boots with webbing pull tabs\n\nTIMEFRAME Please note we typically carry enough stock of our baby booties in both sizes and colours to have them available for individual orders. For larger quantity orders these may need to be made-to-order with a timeframe of 1-6 weeks.",
   },
@@ -163,7 +162,7 @@ const productsAPI = [
     fittingGuide:
       "The Brace (the straps on the back of the apron) is adjustable with a height adjustment on the back strap and a waist adjustment. They are one size fits all.\n\nIf you think that you or your recipient may require a longer waist strap if they’re a bit bigger in the belly area, please contact us to arrange this. It will add $10 to your order.\n\n‘Bib’ (the front smock part) is the same on all sizes. The dimensions are approximately: 60cm (at the widest part) and 84cm length.",
     form: "FITTING - MELBOURNE & BALLARAT",
-    price: "255.000",
+    price: "255",
     details:
       "This apron is designed to be simple and classic in its appearance with minimal seams and a traditional pouch pocket detail with a small side compartment for a pen.\n\nMade from analine bovine leather with solid brass hardware.\n\nFeatures Include:\n\nSolid brass fixtures.\n\nItalian shoulder leather strapping.\n\nGreen English elastic.\n\nOne large pocket that will fit an A5 notepad on the left hand side with a pocket on the right to fit a pen or pencil.\n\nYou can opt to put a hand-embossed brass plaque on the apron for an extra $15. There are a couple of sizes to fit either a short name of 5-6 letters, one for 8-10 letters or a larger one for three or four words. Please note the letters are in capitals only and are hand-embossed. Please write in the “Notes” section of your order what you would like to be written on the plaque. The plaque is placed between the top two eyelets at the top of the apron bib. Please note that customised aprons are non-exchangeable.\n\nTIMEFRAME Please note we typically carry enough stock of our aprons in both styles and all the colours to have them available for individual orders. For larger quantity orders these may need to be made-to-order with a timeframe of 1-6 weeks.",
   },
@@ -180,7 +179,7 @@ const productsAPI = [
     fittingGuide:
       "The Brace (the straps on the back of the apron) is adjustable with a height adjustment on the back strap and a waist adjustment. They are one size fits all.\n\nIf you feel that you or your recipient might require a longer waist strap if someone is bigger in the belly area, please contact us to put this through manually. Longer waist straps add $10 to your order.\n\n‘Bib’ (the front smock part) is the same on all sizes. The dimensions are approximately: 65cm (at the widest part) 85cm length.",
     form: "FITTING - MELBOURNE & BALLARAT",
-    price: "325.000",
+    price: "325",
     details:
       "The Machinist Apron is the staple apron in our workshop. This protective apron is designed for hard use and does not compromise on the mobility of the wearer. The brace has been designed to sit on your shoulders, not your neck, to alleviate any discomfort that arises from sustained wear.\n\nFeatures Include:\n\nSolid brass fixtures.\n\nItalian shoulder leather strapping.\n\nEnglish elastic.\n\nOne large pocket entered from the right hand side of the waist that will fit an A5 notepad (difficult to see in photo). With a single smaller pocket at the top which fits business cards and a place for 2 pens/pencils.\n\nYou can opt to put a hand-embossed brass plaque on the apron for an extra $15. There are a couple of sizes to fit either a short name of 5-6 letters, one for 8-10 letters or a larger one for three or four words. Please note the letters are in capitals only and are hand-embossed. Please write in the “Notes” section of your order what you would like to be written on the plaque. The plaque is placed between the top two eyelets at the top of the apron bib. Please note that customised aprons are non-exchangeable.\n\nTIMEFRAME Please note we typically carry enough stock of our aprons in both styles and all the colours to have them available for individual orders. For larger quantity orders these may need to be made-to-order with a timeframe of 1-6 weeks.",
   },
@@ -198,7 +197,7 @@ const productsAPI = [
 
     fittingGuide:
       "Can work as a carry-on bag for short flights (check with your flight provider).\n\nApproximate measurements: 48cm (length) x 24cm (width) x 32cm (height)",
-    price: "650.000",
+    price: "650",
     details:
       "The Weekender is the larger relation to our Overnighter bag. This is big enough to carry enough for a long weekend away.\n\nOur full-grain vegetable-tanned leather Weekender bag is lined with leather on the base and has been designed with a pleated top to allow for easier access. Features include solid brass fixtures, including the compartment zip on the internal pocket. The Weekender comes with handles pictured and reinforced leather shoulder strap out of contrasting Italian leather strapping.\n\nPlease note variations in leather colour occur naturally between hide to hide. This is most prominent in the dark brown and cognac colours. The bag will naturally have character and slight imperfections on the leather which we embrace. The bags once made can be stiff until they are used and worn in where it becomes more buttery in feel. Please allow time for this to develop with this natural material.\n\nPlease note that all our goods are made-to-order unless stock already exists in our shop in Melbourne. Lead times can be found in our footer below for leather goods and footwear.",
   },
@@ -213,7 +212,7 @@ const productsAPI = [
     fittingGuide:
       "Large:\n\nWidth – 53cm at the top\n\nWidth – 40cm at the base\n\nDepth – 22cm at the base\n\nHeight – 33cm\n\nMedium:\n\nWidth – 48cm at the top\n\nWidth – 33cm at the base\n\nDepth – 20cm at the base\n\nHeight – 31cm\n\nPlease note: Sizing is approximate",
     form: "FITTING - MELBOURNE & BALLARAT",
-    price: "125.000",
+    price: "125",
     details:
       "We first made this bag for Kara Rosenlund – a lady with style. We liked the bag and she said it was fine if we made it for a few others.\n\nSo here it is and everyone’s happy.\n\nWe now offer two sizes of the Kara tote. The original is considered the ‘large’, with a ‘medium’ version now available which is halfway between the Ladies handbag and the large Kara in size. Please see photos above for comparisons.\n\nZips can be added to the bag for $70. Please contact us if you wish for this option as it becomes a custom order.\n\nPlease note that we use vegetable-tanned leather for this bag which differs to the consistent smooth finish that you find in most commercial bags. The bag will naturally have character and slight imperfections on the leather which we embrace. The bags once made can be stiff until they are used and worn in where it becomes more buttery in feel. Please allow time for this to develop with this natural material.\n\nPlease note that all our goods are made-to-order unless stock already exists in our shop in Melbourne. Lead times can be found in our footer below for leather goods and footwear.",
   },
@@ -230,7 +229,7 @@ const productsAPI = [
     fittingGuide:
       "13″\n\nDepth – 110mm\n\nWidth – 380mm\n\nHeight – 310mm including handle\n\n15″\n\nDepth – 120mm\n\nWidth – 420mm\n\nHeight – 340mm including handle\n\nNote: Sizing is approximate",
     form: "FITTING - MELBOURNE & BALLARAT",
-    price: "895.000",
+    price: "895",
     details:
       "A traditional all-leather briefcase available in both 13” and 15” sizes to suit the appropriate device. Features two gussets to separate paperwork from devices, and a small back pocket accessed also from a zip at the back. Made in Australian bovine leather with Italian leather contrast strapping. Shoulder strap included and the lid closes using pouch studs to keep the silhouette simple and classic.\n\nThe 15″ includes a pen pocket between the front panels as well as two small pockets, whereas the 13″ only has the two pockets and no pen holder.\n\nPlease note variations in leather colour occur naturally between hide to hide. This is most prominent in the dark brown colour, which can be darker, like a bitter chocolate brown/black. The leather we use for our bags is vegetable-tanned leather, which differs to the consistent smooth finish that you find in most commercial bags. The bag will naturally have character and slight imperfections on the leather which we embrace. The bags once made can be stiff until they are used and worn in where it becomes more buttery in feel.\n\nPlease note that all our goods are made-to-order unless stock already exists in our shop in Melbourne. Lead times can be found in our footer below for leather goods and footwear.",
   },
@@ -247,7 +246,7 @@ const productsAPI = [
     fittingGuide:
       "13″\n\nDepth – 5.3cm (internal)\n\nWidth – 38cm at widest\n\nHeight – 35cm from base to top of handle\n\nLength of strap – Adjustable from 108cm to 128cm\n\n15″\n\nWidth – 42cm at widest\n\nPlease note sizing is approximate.",
     form: "FITTING - MELBOURNE & BALLARAT",
-    price: "35.000",
+    price: "35",
     details:
       "Edward (known to his friends as Bertie) is a unisex slimline briefcase, designed to be carried over the shoulder or by the smiley face handle. It has one internal zipped pocket and a clasp closure over the handles for more comfort and security. The shoulder strap is elegantly fine and adjustable to suit various body shapes, heights and offers the carrier versatility.\n\nAvailable in 13″ and 15″ in similar width dimensions to our Briefcase Satchel.\n\nOptional shoulder pad over shoulder strap available. Please write in the Notes section of your order if you would like this added.\n\nPlease note that there will be natural variations and marks in the leather that we embrace. Colour variation will occur from hide to hide, batch to batch. This is most prominent in the dark brown colour, which can be darker, like a bitter chocolate brown/black.\n\nPlease note that all our goods are made-to-order unless stock already exists in our shop in Melbourne. Lead times can be found in our footer below for leather goods and footwear.",
   },

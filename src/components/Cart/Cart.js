@@ -10,16 +10,20 @@ const cx = classNames.bind(styles);
 
 export default function Cart(props) {
   const {
-    changeImg,
-    sizeL,
-    sizeR,
-    changeImgBlack,
-    changeImgBlue,
-    changeImgYellow,
-    changeImgBrown,
-    changeImgGreen,
-    changeImgGrey,
+    // changeImg,
+    // sizeL,
+    // sizeR,
+    // changeImgBlack,
+    // changeImgBlue,
+    // changeImgYellow,
+    // changeImgBrown,
+    // changeImgGreen,
+    // changeImgGrey,
+    // changeImgOriginal,
+    price,
+    // setPrice,
   } = props;
+
   const cart = useSelector((state) => state.add);
   const dispatch = useDispatch();
   useEffect(() => {
@@ -51,29 +55,43 @@ export default function Cart(props) {
             </div>
           </div>
           <CartItem
-            changeImgBlack={changeImgBlack}
-            changeImgBlue={changeImgBlue}
-            changeImgYellow={changeImgYellow}
-            changeImgBrown={changeImgBrown}
-            changeImgGreen={changeImgGreen}
-            changeImgGrey={changeImgGrey}
+            // changeImgBlack={changeImgBlack}
+            // changeImgBlue={changeImgBlue}
+            // changeImgYellow={changeImgYellow}
+            // changeImgBrown={changeImgBrown}
+            // changeImgGreen={changeImgGreen}
+            // changeImgGrey={changeImgGrey}
+            // changeImgOriginal={changeImgOriginal}
             getCart={getCart}
-            changeImg={changeImg}
-            siezL={sizeL}
-            sizeR={sizeR}
+            // changeImg={changeImg}
+            // // sizeL={sizeL}
+            // // sizeR={sizeR}
+            // setPrice={setPrice}
+            // price={price}
           />
-          <input
-            value="CHECKOUT"
-            type="submit"
-            className={cx("checkout")}
-          ></input>
+          <Link to="/shop/checkout" style={{ textDecoration: "none" }}>
+            <input
+              value="CHECKOUT"
+              type="submit"
+              className={cx("checkout")}
+            ></input>
+          </Link>
           <div className={cx("bottom")}>
             <div className={cx("subtotal")}>
               <div className={cx("flexbox")}>
                 <p>SUBTOTAL</p>
-                <p>{cart.cartTotalAmount} $</p>
-                <p>{sizeL}</p>
-                <p>{sizeR}</p>
+                {/* <p>{cart.cartTotalAmount} $</p> */}
+                <p>
+                  {price ? (
+                    <div>
+                      {parseInt(cart.cartTotalAmount) +
+                        Number(50 * getCart.length)}{" "}
+                      $
+                    </div>
+                  ) : (
+                    <div>{cart.cartTotalAmount} $</div>
+                  )}
+                </p>
               </div>
             </div>
           </div>

@@ -5,8 +5,8 @@ import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import Slider from "react-slick";
-import { addProduct } from "../../../redux/addToCart";
-
+import addToCart, { addColor, addProduct } from "../../../redux/addToCart";
+import "./CardDetail.css";
 const cx = classNames.bind(styles);
 
 export default function CardDetail(props) {
@@ -29,6 +29,8 @@ export default function CardDetail(props) {
     setSizeR,
     sizeL,
     sizeR,
+    price,
+    setPrice,
   } = props;
   const dispatch = useDispatch();
   const settings = {
@@ -54,9 +56,11 @@ export default function CardDetail(props) {
   useEffect(() => {
     compare();
   }, [id]);
+  const [selected, setSelected] = useState(false);
 
   const changeColorBlack = (data) => {
     console.log("b", changeImgBlack);
+    setSelected(true);
     setChangeImgBlack(true);
     setChangeImgBrown(false);
     setChangeImgBlue(false);
@@ -67,6 +71,8 @@ export default function CardDetail(props) {
     setChangeImg(false);
   };
   const changeColorBrown = (data) => {
+    setSelected(true);
+
     console.log("br", changeImgBrown);
     setChangeImgBlack(false);
     setChangeImgBrown(true);
@@ -78,6 +84,8 @@ export default function CardDetail(props) {
     setChangeImg(false);
   };
   const changeColorBlue = (data) => {
+    setSelected(true);
+
     console.log("bl", changeImgBlue);
     setChangeImgBlack(false);
     setChangeImgBrown(false);
@@ -88,7 +96,9 @@ export default function CardDetail(props) {
     setChangeImgYellow(false);
     setChangeImg(false);
   };
-  const changeColorGreen = (data) => {
+  const changeColorGreen = () => {
+    setSelected(true);
+
     console.log("gr", changeImgGreen);
     setChangeImgBlack(false);
     setChangeImgBrown(false);
@@ -99,7 +109,10 @@ export default function CardDetail(props) {
     setChangeImgYellow(false);
     setChangeImg(false);
   };
+
   const changeColorGrey = (data) => {
+    setSelected(true);
+
     console.log("grey", changeImgGrey);
     setChangeImgBlack(false);
     setChangeImgBrown(false);
@@ -111,6 +124,8 @@ export default function CardDetail(props) {
     setChangeImg(false);
   };
   const changeColorYellow = (data) => {
+    setSelected(true);
+
     console.log("ye", changeImgYellow);
     setChangeImgBlack(false);
     setChangeImgBrown(false);
@@ -122,6 +137,8 @@ export default function CardDetail(props) {
     setChangeImg(false);
   };
   const changeColorOrigin = (data) => {
+    setSelected(true);
+
     console.log("o", changeImg);
     setChangeImgBlack(false);
     setChangeImgBrown(false);
@@ -142,13 +159,56 @@ export default function CardDetail(props) {
   const handleSizeR = (e) => {
     setSizeR(e.target.value);
   };
+  const [sole2, setSole2] = useState(false);
+  const [sole3, setSole3] = useState(false);
+  const [sole, setSole] = useState(false);
+  const handleActive = (data) => {
+    if (sole2 === true || sole3 === true) {
+      setSole2(false);
+      setSole3(false);
+      setPrice(false);
+
+      setSole((sole) => !sole);
+    } else {
+      setPrice(false);
+
+      setSole((sole) => !sole);
+    }
+  };
+
+  const handleActive2 = (data) => {
+    if (sole === true || sole3 === true) {
+      setSole(false);
+      setSole3(false);
+      setPrice(true);
+
+      setSole2((sole2) => !sole2);
+    } else {
+      setPrice(true);
+
+      setSole2((sole2) => !sole2);
+    }
+  };
+  const handleActive3 = (data) => {
+    if (sole2 === true || sole === true) {
+      setSole2(false);
+      setSole(false);
+      setSole3((sole3) => !sole3);
+    } else {
+      setPrice(true);
+
+      setSole3((sole3) => !sole3);
+    }
+  };
+
+  const colorItem = useSelector((state) => state.color);
   return (
     <div className={cx("wrapper")}>
       {data.map((data, idx) => {
         return (
-          <>
+          <div key={idx}>
             <div
-              key={idx}
+              // key={idx}
               style={{ marginLeft: "3vw", marginRight: "3vw" }}
               className={cx("slider")}
             >
@@ -267,7 +327,7 @@ export default function CardDetail(props) {
                               onChange={(e) => handleSizeR(e)}
                               value={sizeR}
                             >
-                              <option>10</option>
+                              <option>{sizeR}</option>
                               <option>9.5</option>
                               <option>9</option>
                               <option>8.5</option>
@@ -284,63 +344,135 @@ export default function CardDetail(props) {
                       <></>
                     )}
                     <div className={cx("colors")}>
-                      {data.imgBlack ? (
+                      <div className={cx("titleColors")}>
+                        <h2>COLOUR</h2>
+                      </div>
+                      <div className={cx("color")}>
                         <div
-                          className={cx("black")}
-                          onClick={(data) => changeColorBlack(data)}
+                          className={cx("original")}
+                          onClick={(data) => changeColorOrigin(data)}
                         ></div>
-                      ) : (
-                        <></>
-                      )}
-                      {data.imgBrown ? (
-                        <div
-                          className={cx("brown")}
-                          onClick={(data) => changeColorBrown(data)}
-                        ></div>
-                      ) : (
-                        <></>
-                      )}
-                      {data.imgYellow ? (
-                        <div
-                          className={cx("yellow")}
-                          onClick={(data) => changeColorYellow(data)}
-                        ></div>
-                      ) : (
-                        <></>
-                      )}
-                      {data.imgGrey ? (
-                        <div
-                          className={cx("grey")}
-                          onClick={(data) => changeColorGrey(data)}
-                        ></div>
-                      ) : (
-                        <></>
-                      )}
-                      {data.imgBlue ? (
-                        <div
-                          className={cx("blue")}
-                          onClick={(data) => changeColorBlue(data)}
-                        ></div>
-                      ) : (
-                        <></>
-                      )}
-                      {data.imgGreen ? (
-                        <div
-                          className={cx("green")}
-                          onClick={(data) => changeColorGreen(data)}
-                        ></div>
-                      ) : (
-                        <></>
-                      )}
-                      <div
-                        className={cx("original")}
-                        onClick={(data) => changeColorOrigin(data)}
-                      ></div>
+                        {data.imgBlack ? (
+                          <div
+                            className={cx("black")}
+                            onClick={(data) => changeColorBlack(data)}
+                          ></div>
+                        ) : (
+                          <></>
+                        )}
+                        {data.imgBrown ? (
+                          <div
+                            className={cx("brown")}
+                            onClick={(data) => changeColorBrown(data)}
+                          ></div>
+                        ) : (
+                          <></>
+                        )}
+                        {data.imgYellow ? (
+                          <div
+                            className={cx("yellow")}
+                            onClick={(data) => changeColorYellow(data)}
+                          ></div>
+                        ) : (
+                          <></>
+                        )}
+                        {data.imgGrey ? (
+                          <div
+                            className={cx("grey")}
+                            onClick={(data) => changeColorGrey(data)}
+                          ></div>
+                        ) : (
+                          <></>
+                        )}
+                        {data.imgBlue ? (
+                          <div
+                            className={cx("blue")}
+                            onClick={(data) => changeColorBlue(data)}
+                          ></div>
+                        ) : (
+                          <></>
+                        )}
+                        {data.imgGreen ? (
+                          <div
+                            className={cx("green")}
+                            onClick={(data) => changeColorGreen(data)}
+                          ></div>
+                        ) : (
+                          <></>
+                        )}
+                      </div>
                     </div>
                     {/* <div
                         className={cx("black")}
                         onClick={(data) => changeColor(data)}
                       ></div> */}
+                    <div className={cx("sole")}>
+                      <div className={cx("title-sole")}>
+                        <h2>SOLE :</h2>
+                      </div>
+                      <div className={cx("sole-content")}>
+                        {data.soleText3 ? (
+                          <div
+                            className={cx(`first-sole ${sole ? "active" : ""}`)}
+                            onClick={(data) => handleActive(data)}
+                          >
+                            <div className={cx("title-first-sole")}>
+                              <p>{data.soleText3}</p>
+                            </div>
+                            <div className={cx("img-first-sole")}>
+                              <img src={data.sole3} alt=""></img>
+                            </div>
+                          </div>
+                        ) : (
+                          <></>
+                        )}
+                        {data.soleText ? (
+                          <div
+                            className={cx(
+                              `first-sole ${sole2 ? "active" : ""}`
+                            )}
+                            onClick={(data) => handleActive2(data)}
+                          >
+                            <div className={cx("title-first-sole")}>
+                              <p>{data.soleText}</p>
+                            </div>
+                            <div className={cx("img-first-sole")}>
+                              <img src={data.sole} alt=""></img>
+                            </div>
+                          </div>
+                        ) : (
+                          <></>
+                        )}
+                        {data.soleText2 ? (
+                          <div
+                            className={cx(
+                              `first-sole ${sole3 ? "active" : ""}`
+                            )}
+                            onClick={(data) => handleActive3(data)}
+                          >
+                            <div className={cx("title-first-sole")}>
+                              <p>{data.soleText2}</p>
+                            </div>
+                            <div className={cx("img-first-sole")}>
+                              <img src={data.sole2} alt=""></img>
+                            </div>
+                          </div>
+                        ) : (
+                          <></>
+                        )}
+                      </div>
+                    </div>
+                    <div className={cx("total")}>
+                      <h2>TOTAL (PER ITEM)</h2>
+                      <span>
+                        {price ? (
+                          <div>{parseInt(data.price) + Number(50)} $</div>
+                        ) : (
+                          <div>{data.price} $</div>
+                        )}{" "}
+                      </span>
+                      {console.log(price)}
+                    </div>
                     <div className={cx("addCart")}>
                       <button onClick={() => handleAdd(data)}>
                         Add to cart
@@ -350,7 +482,7 @@ export default function CardDetail(props) {
                 </div>
               </div>
             </div>
-          </>
+          </div>
         );
       })}
     </div>

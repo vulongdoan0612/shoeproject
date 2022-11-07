@@ -38,6 +38,7 @@ export default function Banner() {
             alt=""
           ></img>
           <img
+            className={cx("imgLeft")}
             src="https://wootten.com.au/assets/images/home/heritage.9855945.jpg"
             alt=""
           ></img>
@@ -49,6 +50,7 @@ export default function Banner() {
             alt=""
           ></img>
           <img
+            className={cx("imgRight")}
             src="https://wootten.com.au/assets/images/home/process.09a83e9.jpg"
             alt=""
           ></img>

@@ -1,3 +1,16 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 0.875rem !important;
+  line-height: 1.125rem;
+  color: #000;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
 *,
 *::before,
 *::after {
@@ -26,17 +39,14 @@ textarea,
 select {
   outline: none;
 }
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
-}
 
 img {
   width: 100%;
   object-fit: fill;
+}
+p {
+  font-family: Monaco, monospace;
+  font-size: 0.6875rem;
+  line-height: 1.125rem;
+  color: rgba(0, 0, 0, 0.9);
 }

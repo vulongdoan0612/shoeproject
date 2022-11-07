@@ -1,5 +1,6 @@
 import HomePage from "./components/Page/Home/HomePage";
 import Navbar from "./components/Navbar/Navbar";
+import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -7,8 +8,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Cart from "./components/Cart/Cart";
 import CardDetail from "./components/Page/CardDetail/CardDetail";
 import { useState } from "react";
+import CheckOut from "./components/Page/CheckOut/CheckOut";
+import Footer from "./components/Footer/Footer";
 
 function App() {
+  const [price, setPrice] = useState(false);
+
   const [changeImg, setChangeImg] = useState(false);
 
   const [changeImgBlack, setChangeImgBlack] = useState(false);
@@ -32,15 +37,17 @@ function App() {
           path="/cart"
           element={
             <Cart
-              changeImgBlack={changeImgBlack}
-              changeImgBlue={changeImgBlue}
-              changeImgYellow={changeImgYellow}
-              changeImgBrown={changeImgBrown}
-              changeImgGreen={changeImgGreen}
-              changeImgGrey={changeImgGrey}
-              changeImg={changeImg}
-              sizeL={sizeL}
-              sizeR={sizeR}
+              setPrice={setPrice}
+              price={price}
+              // changeImgBlack={changeImgBlack}
+              // changeImgBlue={changeImgBlue}
+              // changeImgYellow={changeImgYellow}
+              // changeImgBrown={changeImgBrown}
+              // changeImgGreen={changeImgGreen}
+              // changeImgGrey={changeImgGrey}
+              // changeImg={changeImg}
+              // sizeL={sizeL}
+              // sizeR={sizeR}
             ></Cart>
           }
         ></Route>
@@ -48,6 +55,7 @@ function App() {
           path="/card-detail/:id"
           element={
             <CardDetail
+              sizeR={sizeR}
               sizeL={sizeL}
               setSizeR={setSizeR}
               setSizeL={setSizeL}
@@ -65,10 +73,14 @@ function App() {
               changeImgGreen={changeImgGreen}
               changeImgGrey={changeImgGrey}
               changeImg={changeImg}
+              setPrice={setPrice}
+              price={price}
             ></CardDetail>
           }
         ></Route>
+        <Route path="/shop/checkout" element={<CheckOut></CheckOut>}></Route>
       </Routes>
+      <Footer></Footer>
     </Router>
   );
 }

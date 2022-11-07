@@ -1,4 +1,6 @@
 .card {
+  padding-top: 15px;
+  padding-bottom: 15px;
   border-bottom: 1px solid #e4e5e6;
   justify-content: space-evenly;
   align-items: center;
@@ -16,21 +18,68 @@
   display: flex;
   justify-content: center;
 }
-.leftCard{
-  flex:3;
-    display:flex;
-    align-items: center;
+.leftCard {
+  flex: 3;
+  display: flex;
+  align-items: center;
 }
-.arrow{
-  display:flex;
+.arrow {
+  display: flex;
   flex-direction: column;
 }
-.qnty{
+.qnty {
   margin-left: 100px;
   justify-content: center;
-  flex:2;
-  display:flex;
+  flex: 2;
+  display: flex;
 }
-.cardPrice{
-  width:55px;
+.cardPrice {
+  width: 55px;
+}
+.qnty input {
+  text-align: center;
+}
+@media (min-width: 1200px) and (max-width: 1436px) {
+  .wrapper {
+    width: 25vw;
+  }
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+  
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+  .wrapper {
+    width: 80vw;
+  }
+  .qnty {
+    margin: 0;
+  }
+  .card {
+    width: 70vw;
+  }
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+  .wrapper {
+    width: 86vw;
+  }
+  .qnty {
+    margin: 0;
+  }
+  .card {
+    width: 70vw;
+  }
+  .cardImg {
+    display: none;
+  }
 }

@@ -8,9 +8,14 @@ export const productSlice = createSlice({
   },
 
   reducers: {
+    // addColor: (state, action) => {
+
+    //   state.info = [...state.cart, action.payload];
+    // },
+
     addProduct: (state, action) => {
       //function quantity
-      //function findIndex dùng để chỉ đích danh card nào đó
+      //function findIndex dùng để chỉ đích danh hành động card nào đó
       const existingIndex = state.cart.findIndex(
         (item) => item.id === action.payload.id
       );
@@ -21,10 +26,12 @@ export const productSlice = createSlice({
           cartQuantity: state.cart[existingIndex].cartQuantity + 1,
         };
       } else {
-        let tempProductItem = { ...action.payload, cartQuantity: 1 };
+        let tempProductItem = {
+          ...action.payload,
+          cartQuantity: 1,
+        };
         state.cart.push(tempProductItem);
       }
-      //function quantity
     },
     decreaseProduct: (state, action) => {
       const itemIndex = state.cart.findIndex(
@@ -61,5 +68,6 @@ export const productSlice = createSlice({
     },
   },
 });
-export const { addProduct, decreaseProduct, getTotals } = productSlice.actions;
+export const { addProduct, decreaseProduct, getTotals, addColor } =
+  productSlice.actions;
 export default productSlice.reducer;

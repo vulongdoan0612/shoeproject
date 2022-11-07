@@ -7,11 +7,11 @@ import { addProduct } from "../../redux/addToCart";
 import { Link } from "@mui/material";
 const cx = classNames.bind(styles);
 export default function Cards() {
-  const dispatch = useDispatch();
-  // const add = useSelector((state) => state.add.cart);
-  const handleAdd = (product) => {
-    dispatch(addProduct(product));
-  };
+  // const dispatch = useDispatch();
+  // // const add = useSelector((state) => state.add.cart);
+  // const handleAdd = (product) => {
+  //   dispatch(addProduct(product));
+  // };
 
   const allProducts = useSelector((state) => state.products.allProducts);
   return (
@@ -41,7 +41,7 @@ export default function Cards() {
       <div className={cx("flexCard")}>
         {allProducts.map((product, id) => {
           return (
-            <div onClick={() => handleAdd(product)} key={id}>
+            <div key={id}>
               <CardItem
                 id={product.id}
                 product={product}

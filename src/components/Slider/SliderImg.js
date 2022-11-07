@@ -1,5 +1,8 @@
 import React from "react";
 import Slider from "react-slick";
+import classNames from "classnames/bind";
+import styles from "../Navbar/Navbar.module.scss";
+const cx = classNames.bind(styles);
 
 export default function SliderImg() {
   const settings = {
@@ -12,7 +15,10 @@ export default function SliderImg() {
     slidesToScroll: 1,
   };
   return (
-    <div style={{ marginLeft: "3vw", marginRight: "3vw" }}>
+    <div
+      style={{ marginLeft: "3vw", marginRight: "3vw" }}
+      className={cx("slider")}
+    >
       <Slider {...settings}>
         <div>
           <img

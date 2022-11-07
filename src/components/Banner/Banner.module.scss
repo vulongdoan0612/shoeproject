@@ -75,3 +75,129 @@
 .rightSecond {
   transition: all 0.3s ease;
 }
+@media (min-width: 1200px) and (max-width: 1440px) {
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .cardRightFirst {
+    width: 29vw;
+  }
+  .cardLeftFirst {
+    width: 29vw;
+  }
+  .titleRight {
+    margin-top: 24vh;
+    right: 16vw;
+  }
+  .titleLeft {
+    margin-top: 24vh;
+    right: 16vw;
+  }
+  .cardRightFirst p {
+    height: 66px;
+  }
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+  .firstBanner {
+    min-height: 746px;
+    background-size: 891px 903px;
+  }
+  .cardRightFirst {
+    width: 35vw;
+  }
+  .cardLeftFirst {
+    width: 35vw;
+  }
+  .titleRight {
+    margin-top: 20vh;
+    right: 11vw;
+  }
+  .titleLeft {
+    margin-top: 20vh;
+    left: 14vw;
+  }
+  .cardRightFirst p {
+    height: 66px;
+  }
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+  .firstBanner {
+    min-height: 746px;
+    background-size: 891px 903px;
+  }
+  .cardRightFirst {
+    width: 35vw;
+  }
+  .cardLeftFirst {
+    width: 35vw;
+  }
+  .titleRight {
+    margin-top: 20vh;
+    right: 11vw;
+  }
+  .titleLeft {
+    margin-top: 20vh;
+    left: 14vw;
+  }
+  .cardRightFirst p {
+    height: 66px;
+  }
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+  .firstBanner {
+    align-items: center;
+    flex-direction: column;
+    min-height: 500px;
+    background-size: 891px 903px;
+  }
+  .headerFirst {
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    margin-top: 0;
+    width: 50vw;
+    left: 0;
+    align-items: center;
+    position: relative;
+  }
+  .cardRightFirst {
+    width: 65vw;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 10vh;
+  }
+  .cardLeftFirst {
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+    width: 65vw;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .titleRight {
+    margin-top: 20vh;
+    right: 20vw;
+  }
+  .titleLeft {
+    margin-top: 20vh;
+    left: 27vw;
+  }
+  .cardRightFirst p {
+    height: 84px;
+  }
+  // .imgRight {
+  //   width: 50vw;
+  // }
+  // .imgLeft{
+  //   width:50vw;
+  // }
+  .cecondBanner {
+    flex-direction: column;
+  }
+}

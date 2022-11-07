@@ -1,4 +1,7 @@
 .wrapper {
+  padding-top: 20vh;
+  height: 100vh;
+  margin-top: 20vh;
   margin-left: 3vw;
   margin-right: 3vw;
 }
@@ -82,4 +85,49 @@
   padding: 8px 30px;
   background: #333;
   color: #fff;
+}
+@media (min-width: 1200px) and (max-width: 1440px) {
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+  .wrapper {
+    margin-top: 8vh;
+  }
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+  .wrapper {
+    margin-top: 8vh;
+  }
+  .checkout {
+    width: 70vw;
+  }
+  .flexbox {
+    width: 70vw;
+  }
+  .qntyCard {
+    width: 70vw;
+  }
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+  .checkout {
+    width: 70vw;
+  }
+  .flexbox {
+    width: 70vw;
+  }
+  .qntyCard {
+    width: 79vw;
+  }
+  .wrapper {
+    margin-top: 8vh;
+  }
 }

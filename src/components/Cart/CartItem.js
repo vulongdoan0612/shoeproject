@@ -5,30 +5,34 @@ import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { useDispatch, useSelector } from "react-redux";
 import { addProduct, decreaseProduct, getTotals } from "../../redux/addToCart";
+import { Link } from "react-router-dom";
 const cx = classNames.bind(styles);
 
 export default function CartItem(props) {
+  const color = useSelector((state) => state.add.info);
   const dispatch = useDispatch();
   const {
     getCart,
-    changeImg,
-    sizeL,
-    sizeR,
-    changeImgGreen,
-    changeImgBlue,
-    changeImgGrey,
-    changeImgYellow,
-    changeImgBrown,
-    changeImgBlack,
+    // changeImg,
+    // sizeL,
+    // sizeR,
+    // changeImgGreen,
+    // changeImgBlue,
+    // changeImgGrey,
+    // changeImgYellow,
+    // changeImgBrown,
+    // changeImgBlack,
+    // changeImgOriginal,
+    // price,
+    // setPrice,
   } = props;
-  console.log(getCart);
-  const handleUp = (get) => {
-    dispatch(addProduct(get));
+  const handleUp = (get, price) => {
+    dispatch(addProduct(get, price));
   };
+
   const handleDown = (get) => {
     dispatch(decreaseProduct(get));
   };
-  console.log(changeImg);
   return (
     <>
       {getCart.map((get) => {
@@ -36,40 +40,74 @@ export default function CartItem(props) {
           <div className={cx("wrapper")}>
             <div className={cx("card")}>
               <div className={cx("leftCard")}>
-                {changeImg ? (
+                <Link to={`/card-detail/${get.id}`}>
                   <div className={cx("cardImg")}>
                     <img src={get.img} alt=""></img>
                   </div>
-                ) : changeImgGreen ? (
-                  <div className={cx("cardImg")}>
-                    <img src={get.imgGreen} alt=""></img>
-                  </div>
-                ) : changeImgBlue ? (
-                  <div className={cx("cardImg")}>
-                    <img src={get.imgBlue} alt=""></img>
-                  </div>
-                ) : changeImgGrey ? (
-                  <div className={cx("cardImg")}>
-                    <img src={get.imgGrey} alt=""></img>
-                  </div>
-                ) : changeImgYellow ? (
-                  <div className={cx("cardImg")}>
-                    <img src={get.imgYellow} alt=""></img>
-                  </div>
-                ) : changeImgBrown ? (
-                  <div className={cx("cardImg")}>
-                    <img src={get.imgBrown} alt=""></img>
-                  </div>
-                ) : changeImgBlack ? (
-                  <div className={cx("cardImg")}>
-                    <img src={get.imgBlack} alt=""></img>
-                  </div>
-                ) : (
-                  <></>
-                )}
+                  {/* {changeImg ? (
+                    <div className={cx("cardImg")}>
+                      <img src={get.img} alt=""></img>
+                    </div>
+                  ) : changeImgGreen ? (
+                    <div className={cx("cardImg")}>
+                      <img src={get.imgGreen} alt=""></img>
+                    </div>
+                  ) : changeImgBlue ? (
+                    <div className={cx("cardImg")}>
+                      <img src={get.imgBlue} alt=""></img>
+                    </div>
+                  ) : changeImgGrey ? (
+                    <div className={cx("cardImg")}>
+                      <img src={get.imgGrey} alt=""></img>
+                    </div>
+                  ) : changeImgYellow ? (
+                    <div className={cx("cardImg")}>
+                      <img src={get.imgYellow} alt=""></img>
+                    </div>
+                  ) : changeImgBrown ? (
+                    <div className={cx("cardImg")}>
+                      <img src={get.imgBrown} alt=""></img>
+                    </div>
+                  ) : changeImgBlack ? (
+                    <div className={cx("cardImg")}>
+                      <img src={get.imgBlack} alt=""></img>
+                    </div>
+                  ) : changeImgOriginal ? (
+                    <div className={cx("cardImg")}>
+                      <img src={get.img} alt=""></img>
+                    </div>
+                  ) : (
+                    <div className={cx("cardImg")}>
+                      <img src={get.img} alt=""></img>
+                    </div>
+                  )} */}
+                </Link>
                 <div className={cx("cardInfo")}>
                   <p>{get.title}</p>
-                  {changeImg ? <p>color:black</p> : <></>}
+                  {/* {changeImg ? (
+                    <p>COLOR: ORIGINAL</p>
+                  ) : changeImgGreen ? (
+                    <p>COLOR: GREEN</p>
+                  ) : changeImgBlue ? (
+                    <p>COLOR: BLUE</p>
+                  ) : changeImgGrey ? (
+                    <p>COLOR: GREY</p>
+                  ) : changeImgYellow ? (
+                    <p>COLOR: YELLOW</p>
+                  ) : changeImgBrown ? (
+                    <p>COLOR: BROWN</p>
+                  ) : changeImgBlack ? (
+                    <p>COLOR: BLACK</p>
+                  ) : (
+                    <p>COLOR: ORIGINAL</p>
+                  )} */}
+                  {/* <div
+                    className={cx("footSize")}
+                    style={{ flexDirection: "row" }}
+                  >
+                    <p>L : {sizeL}</p>
+                    <p>R : {sizeR}</p>
+                  </div> */}
                 </div>
               </div>
               <div className={cx("qnty")}>
@@ -87,7 +125,9 @@ export default function CartItem(props) {
                 </div>
               </div>
               <div className={cx("cardPrice")}>
-                <span>{get.price * get.cartQuantity} $</span>
+                <span>
+                  <div>{get.price * get.cartQuantity} $</div>
+                </span>
               </div>
             </div>
           </div>

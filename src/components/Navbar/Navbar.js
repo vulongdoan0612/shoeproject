@@ -17,11 +17,12 @@ export default function Navbar2() {
 
   return (
     <Navbar
+      className={cx("nav")}
       style={
         scrollY < 50
           ? {
               background: "#f0f0f0",
-              transition: "all 2.5s ease",
+              transition: "all 0.5s ease",
               position: "fixed",
               marginLeft: "3vw",
               marginRight: "3vw",
@@ -32,7 +33,7 @@ export default function Navbar2() {
               zIndex: 10,
             }
           : {
-              transition: "all 1.5s ease",
+              transition: "all 0.5s ease",
               backdropFilter: "blur(5px)",
               position: "fixed",
               top: 0,
@@ -54,10 +55,13 @@ export default function Navbar2() {
           style={{ justifyContent: "center" }}
         >
           <Nav style={{ alignItems: "center" }}>
-            <Nav.Link style={{ marginRight: "35px" }}>Home</Nav.Link>
-            <Nav.Link style={{ marginRight: "35px" }}>Home</Nav.Link>
+            <Nav.Link style={{ marginRight: "35px" }} className={cx("mar")}>
+              Home
+            </Nav.Link>
+            <Nav.Link style={{ marginRight: "35px" }} className={cx("mar")}>
+              Home
+            </Nav.Link>
 
-            <Nav.Link style={{ marginRight: "35px" }}>Link</Nav.Link>
             <Link to="/">
               <Navbar.Brand>
                 <img
@@ -67,10 +71,18 @@ export default function Navbar2() {
                 ></img>
               </Navbar.Brand>
             </Link>
-            <Nav.Link style={{ marginRight: "35px" }}>Home</Nav.Link>
-            <Nav.Link style={{ marginRight: "35px" }}>Home</Nav.Link>
+            <Nav.Link style={{ marginRight: "35px" }} className={cx("mar")}>
+              Home
+            </Nav.Link>
+            <Nav.Link style={{ marginRight: "35px" }} className={cx("mar")}>
+              Home
+            </Nav.Link>
 
-            <Link to="/cart" style={{ marginRight: "35px", color: "black" }}>
+            <Link
+              to="/cart"
+              style={{ marginRight: "35px", color: "black" }}
+              className={cx("mar")}
+            >
               <Badge badgeContent={cart.length} color="primary">
                 <ShoppingCartIcon color="black" />
               </Badge>

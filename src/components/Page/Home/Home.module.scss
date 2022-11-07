@@ -25,14 +25,20 @@ textarea,
 select {
   outline: none;
 }
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
+.wrapper p,
+.wrapper h1,
+.wrapper h2,
+.wrapper h3,
+.wrapper h4,
+.wrapper h5,
+.wrapper h6 {
+  font-weight: 600 !important;
+  font-size: 0.875rem !important;
+  line-height: 1.125rem;
+  color: #000;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 .wrapper {
   margin-left: 3vw;

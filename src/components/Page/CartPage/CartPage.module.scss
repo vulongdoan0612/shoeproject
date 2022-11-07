@@ -35,8 +35,36 @@ h6 {
   overflow-wrap: break-word;
 }
 .wrapper {
+  height: 100vh !important;
   margin-left: 3vw;
   margin-right: 3vw;
 
   background-color: #f0f0f0;
+}
+@media (min-width: 1200px) and (max-width: 1440px) {
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+  .wrapper {
+    margin-top: 8vh;
+  }
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+  .wrapper {
+    margin-top: 8vh;
+  }
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+  .wrapper {
+    margin-top: 8vh;
+  }
 }
