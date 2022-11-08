@@ -41,18 +41,22 @@
 }
 @media (min-width: 1200px) and (max-width: 1436px) {
   .wrapper {
-    width: 25vw;
+    width: 80vw;
+  }
+  .qnty {
+    margin: 0;
+  }
+  .card {
+    width: 70vw;
   }
 }
 
 /* Landscape tablets and medium desktops */
 @media (min-width: 992px) and (max-width: 1199px) {
-
 }
 
 /* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 991px) {
-  
 }
 
 /* Landscape phones and portrait tablets */

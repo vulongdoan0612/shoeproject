@@ -31,6 +31,9 @@ export default function CardDetail(props) {
     sizeR,
     price,
     setPrice,
+    bag,
+    foot,
+    apron,
   } = props;
   const dispatch = useDispatch();
   const settings = {
@@ -43,15 +46,35 @@ export default function CardDetail(props) {
     slidesToScroll: 1,
   };
   const productDetail = useSelector((state) => state.products.allProducts);
+  const footProducts = useSelector((state) => state.products.footProducts);
+  const apronProducts = useSelector((state) => state.products.apronProducts);
+
+  const bagProducts = useSelector((state) => state.products.bagProducts);
   const [data, setData] = useState([]);
   //sử dụng useParams để lấy thông tin từ id card ra thay vì truyền props
   const { id } = useParams();
   const compare = () => {
-    let compareData = productDetail.filter((data) => {
-      return data.id == id;
-    });
-    setData(compareData);
-    console.log(data);
+    if (bag === true) {
+      let compareData2 = bagProducts.filter((data) => {
+        return data.id == id;
+      });
+      setData(compareData2);
+    } else if (foot) {
+      let compareData3 = footProducts.filter((data) => {
+        return data.id == id;
+      });
+      setData(compareData3);
+    } else if (apron) {
+      let compareData4 = apronProducts.filter((data) => {
+        return data.id == id;
+      });
+      setData(compareData4);
+    } else {
+      let compareData = productDetail.filter((data) => {
+        return data.id == id;
+      });
+      setData(compareData);
+    }
   };
   useEffect(() => {
     compare();
@@ -201,7 +224,6 @@ export default function CardDetail(props) {
     }
   };
 
-  const colorItem = useSelector((state) => state.color);
   return (
     <div className={cx("wrapper")}>
       {data.map((data, idx) => {
@@ -407,9 +429,14 @@ export default function CardDetail(props) {
                         onClick={(data) => changeColor(data)}
                       ></div> */}
                     <div className={cx("sole")}>
-                      <div className={cx("title-sole")}>
-                        <h2>SOLE :</h2>
-                      </div>
+                      {data.sole ? (
+                        <div className={cx("title-sole")}>
+                          <h2>SOLE :</h2>
+                        </div>
+                      ) : (
+                        <></>
+                      )}
+
                       <div className={cx("sole-content")}>
                         {data.soleText3 ? (
                           <div

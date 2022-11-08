@@ -13,7 +13,7 @@ export default function Banner() {
             alt=""
           ></img>
         </div>
-        <div className={cx("cardLeftFirst")}>
+        <div className={cx("cardLeftFirst")} style={{ cursor: "pointer" }}>
           <p>Standard Made-To-Over Footwear</p>
           <img
             style={{ filter: "blur(1px)" }}
@@ -21,7 +21,7 @@ export default function Banner() {
             alt=""
           ></img>
         </div>
-        <div className={cx("cardRightFirst")}>
+        <div className={cx("cardRightFirst")} style={{ cursor: "pointer" }}>
           <p>Custom-fit/Bespoke footwear</p>
           <img
             style={{ filter: "blur(1px)" }}
@@ -31,7 +31,7 @@ export default function Banner() {
         </div>
       </div>
       <div className={cx("cecondBanner")}>
-        <div className={cx("leftSecond")}>
+        <div className={cx("leftSecond")} style={{ cursor: "pointer" }}>
           <img
             className={cx("titleLeft")}
             src="https://wootten.com.au/assets/images/ir/our-heritage.7dbd653.png"
@@ -43,7 +43,7 @@ export default function Banner() {
             alt=""
           ></img>
         </div>
-        <div className={cx("rightSecond")}>
+        <div className={cx("rightSecond")} style={{ cursor: "pointer" }}>
           <img
             className={cx("titleRight")}
             src="https://wootten.com.au/assets/images/ir/our-process.c9b9ad6.png"

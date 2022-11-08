@@ -28,11 +28,26 @@ function App() {
 
   const [sizeL, setSizeL] = useState(10);
   const [sizeR, setSizeR] = useState(10);
+  const [apron, setApron] = useState(false);
+  const [bag, setBag] = useState(false);
+  const [foot, setFoot] = useState(false);
   return (
     <Router>
       <Navbar></Navbar>
       <Routes>
-        <Route path="/" element={<HomePage></HomePage>}></Route>
+        <Route
+          path="/"
+          element={
+            <HomePage
+              apron={apron}
+              setApron={setApron}
+              setBag={setBag}
+              bag={bag}
+              foot={foot}
+              setFoot={setFoot}
+            ></HomePage>
+          }
+        ></Route>
         <Route
           path="/cart"
           element={
@@ -55,6 +70,9 @@ function App() {
           path="/card-detail/:id"
           element={
             <CardDetail
+              apron={apron}
+              foot={foot}
+              bag={bag}
               sizeR={sizeR}
               sizeL={sizeL}
               setSizeR={setSizeR}

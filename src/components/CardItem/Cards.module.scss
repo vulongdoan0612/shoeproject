@@ -19,6 +19,51 @@
   width: 150px;
   position: absolute;
 }
+.option {
+  display: flex;
+  margin: auto;
+}
+.left span {
+  color: #b9b9b9;
+  background-color: #383733;
+  border: 1px solid #383733;
+  display: block;
+  padding: 0 20px;
+  float: left;
+  line-height: 55px;
+}
+
+.right {
+  cursor: pointer;
+  font-size: 0.6875rem;
+  font-family: sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #a0a0a0;
+  padding-left: 10px;
+  min-width: 10em;
+  background: #fff;
+  border: 1px solid #dcddde;
+  border-radius: 0;
+}
+
+.reset span {
+  cursor: pointer;
+  margin-left: 20px;
+  color: #b9b9b9;
+  background-color: #383733;
+  border: 1px solid #383733;
+  display: block;
+  padding: 0 20px;
+  float: left;
+  line-height: 55px;
+  transition: all 0.3s ease;
+}
+.reset span:hover {
+  background-color: black;
+}
 @media (min-width: 1200px) {
 }
 
@@ -36,6 +81,12 @@
 
 /* Portrait phones and smaller */
 @media (max-width: 480px) {
+  .option {
+    flex-direction: column;
+  }
+  .right {
+    height: 51px;
+  }
   .workShop-img {
     z-index: 1;
 

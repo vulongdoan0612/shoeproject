@@ -39,7 +39,7 @@
   display: flex;
 }
 .content-left {
-  width: 30vw;
+  width: 40vw;
 }
 .content-right {
   display: flex;
@@ -302,7 +302,7 @@
 /* Landscape tablets and medium desktops */
 @media (min-width: 992px) and (max-width: 1199px) {
   .content {
-    width: 85vw;
+    width: 90vw;
     margin: 0;
   }
 }
